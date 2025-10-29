@@ -1,18 +1,15 @@
-import tailwindcss from "@tailwindcss/vite";
+// astro.config.mjs
 // @ts-check
+import { defineConfig } from 'astro/config'
+import mdx from '@astrojs/mdx'
+import tailwindcss from '@tailwindcss/vite'
 
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import { defineConfig } from 'astro/config';
-
-import tailwindcss from '@tailwindcss/vite';
-
-// https://astro.build/config
 export default defineConfig({
-    site: 'https://example.com',
-  integrations: [mdx(), sitemap()],
-
+  // Define un site válido para evitar "Invalid URL" cuando algún código use import.meta.env.SITE
+  site: 'http://localhost:4321',
+  integrations: [mdx()],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss()], // con estas versiones, esto funciona sin cast
   },
-});
+  outDir: 'dist',
+})

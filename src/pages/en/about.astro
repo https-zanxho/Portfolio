@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/ProjectsPost.astro';
+import GlowLineSeparator from '@/components/ui/separator/GlowLineSeparator.astro';
+const pageTitle = 'About Me';
+const pageDescription = 'Learn more about my background and approach to software engineering.'; 
+---
+
+<Layout title={pageTitle} description={pageDescription} pubDate={new Date()} showHeader={false}>
+ <p class="text-justify">
+  Hello! My name is Valentino, I’m 17 years old and currently studying the second year of a Vocational Training program in
+  Microcomputer Systems and Networks. Since I started my studies, I’ve been fascinated by how technology connects people,
+  simplifies tasks, and constantly evolves.
+</p>
+<p class="text-justify"> 
+  Throughout my training, I’ve developed skills in hardware maintenance, networking, and system configuration, while also
+  becoming increasingly interested in software development. My next goal is to continue with a Higher Vocational Training
+  program in either Multiplatform Application Development (DAM) or Web Application Development (DAW) to expand my knowledge
+  in programming and project creation.
+</p>
+<p class="text-justify">
+  I’m motivated by learning, teamwork, and the opportunity to keep improving day by day. My objective is to continue
+  growing as a professional in the IT field, applying what I’ve learned in real work environments and contributing to
+  meaningful technological projects.
+</p >
+
+  <GlowLineSeparator />
+
+</Layout>

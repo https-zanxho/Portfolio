@@ -1,0 +1,66 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/sections/FooterES.astro';
+import Header from '../../components/sections/HeaderES.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import HeroSection from '../../components/sections/HeroSection.astro';
+import SkillsSection from '../../components/sections/SkillsSection.astro';
+import { skills } from '../../data/skillsES';
+import Studies from '../../components/sections/Studies.astro';
+import { studies } from '../../data/studiesES';
+import ArrowSeparator from '../../components/ui/separator/ArrowSeparator.astro'
+import GlowLineSeparator from '../../components/ui/separator/GlowLineSeparator.astro'
+
+// Logos
+// skills are imported from src/data/skills
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark" class="dark">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Site Author',
+      url: new URL('/', Astro.site).toString(),
+      logo: new URL('/logoval.svg', Astro.site).toString(),
+    })} />
+	</head>
+	<body>
+		<Header />
+		<main>
+      <HeroSection
+        title="VΛLΞNTINO"
+        subtitle="Explorando, aprendiendo y creando paso a paso."
+        showCTA
+        primaryCTA={{ text: 'Ver mis proyectos', href: '/es/portfolio' }}
+      />
+     
+
+    <section class="py-6">
+      <ArrowSeparator />
+      <SkillsSection title="Competencias y Herramientas" skills={skills} />   
+      <ArrowSeparator />
+      <section class="py-10">
+        <div class="mx-auto max-w-4xl px-4">
+          <div class="rounded-2xl border border-white/10 bg-white/5 shadow-lg shadow-black/30 backdrop-blur p-6 md:p-8">
+            <h2 class="text-3xl font-bold mb-4 text-white text-center">Experiencia de trabajo</h2>
+            <p class="text-white/90 leading-relaxed text-base md:text-lg text-center max-w-3xl mx-auto">
+              Estoy al comienzo de mi camino profesional. 
+              Aunque todavía no tengo experiencia formal en este ámbito, tengo muchas ganas 
+              de unirme a una empresa o equipo donde pueda aprender, crecer y contribuir a través de proyectos reales. 
+              Mi objetivo ahora es adquirir experiencia práctica y desarrollar mis habilidades día a día.
+            </p>
+          </div>
+        </div>
+      </section>
+      <ArrowSeparator />
+      <Studies title="Estudios" items={studies} />
+      <GlowLineSeparator />
+    </section>
+		</main>
+		<Footer />
+	</body>
+</html>

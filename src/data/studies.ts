@@ -1,28 +1,10 @@
 export const studies = [
   {
-    title: "B.S. in Computer Science",
-    institution: "State University",
+    title: "Microcomputer Systems & Networks (SMR)",
+    institution: "IBN IES Al-Baytar, Spain",
     description:
-      "Core CS foundations: data structures, algorithms, operating systems, networking, and databases; team capstone in web systems.",
-    tags: [
-      "Algorithms",
-      "Data Structures",
-      "Operating Systems",
-      "Databases",
-      "Networking",
-    ],
-  },
-  {
-    title: "M.S. in Software Engineering",
-    institution: "Tech Institute",
-    description:
-      "Focus on distributed systems, testing strategies, and cloud architecture; thesis on resilience patterns in microservices.",
-    tags: [
-      "Distributed Systems",
-      "Cloud Architecture",
-      "Testing",
-      "Microservices",
-    ],
+      "Currently in the second year of a 2-year IT VET program focused on hardware support, networking, operating systems, and basic cybersecurity",
+    tags: [],
   },
 ];
 

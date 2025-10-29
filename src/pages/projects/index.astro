@@ -1,0 +1,57 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/sections/Footer.astro';
+import Header from '../../components/sections/Header.astro';
+import ProjectsHero from '../../components/sections/ProjectsHero.astro';
+import ProjectsAllArticles from '../../components/sections/ProjectsAllArticles.astro';
+import ProjectsPagination from '../../components/ui/nav/ProjectsPagination.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import FeaturedPost from '../../components/ui/card/FeaturedPost.astro';
+import { calculateReadingTimeFromHtml } from '../../lib/reading';
+
+// Cambiá esto si en el futuro hacés una collection "projects"
+const PAGE_SIZE = 6;
+const posts = (await getCollection(
+  'projects',
+  ({ data }) => data.lang === 'en'
+)).sort((a, b) => +b.data.pubDate - +a.data.pubDate);
+const [featured, ...rest] = posts;
+const firstPagePosts = rest.slice(0, PAGE_SIZE);
+const totalPages = Math.max(1, Math.ceil(rest.length / PAGE_SIZE));
+let featuredReading = 0;
+if (featured) {
+  const { Content } = await render(featured);
+  const html = await Astro.slots.render('default');
+  featuredReading = calculateReadingTimeFromHtml(html ?? '');
+}
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <BaseHead title="Projects" description={SITE_DESCRIPTION} />
+    {totalPages > 1 && (
+      <link rel="next" href={`/projects/page/2/`} />
+    )}
+  </head>
+  <body>
+    <Header />
+    <!-- Cambiá el título y subtítulo -->
+    <ProjectsHero 
+      title="Projects" 
+      subtitle="A collection of my projects with full source code and documentation." 
+    />
+    <main class="use-utility-layout mx-auto max-w-5xl px-3 py-5 space-y-7">
+      {featured && (
+        <section class="card-surface p-4 md:p-5 hover-lift sw-featured-card">
+          <FeaturedPost post={featured} readingTimeMin={featuredReading} />
+        </section>
+      )}
+
+      <ProjectsAllArticles posts={firstPagePosts} />
+      <ProjectsPagination currentPage={1} totalPages={totalPages} />
+    </main>
+    <Footer />
+  </body>
+</html>

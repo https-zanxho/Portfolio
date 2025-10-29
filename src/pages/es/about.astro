@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/ProjectsPostES.astro';
+import GlowLineSeparator from '@/components/ui/separator/GlowLineSeparator.astro';
+const pageTitle = 'Acerca de mi';
+const pageDescription = 'Conoce mas acerca de mi y de mi relacion con la informatica y la tecnologia'; 
+---
+
+<Layout title={pageTitle} description={pageDescription} pubDate={new Date()} showHeader={false}>
+   <p class="text-justify">
+    ¡Hola! Soy Valentino, tengo 17 años y estoy estudiando el segundo curso del ciclo de 
+    Sistemas Microinformáticos y Redes. Desde que entré en este mundo, me llamó mucho la atención 
+    cómo la tecnología puede ayudar a las personas, facilitar tareas y estar siempre cambiando.
+  </p>
+  <p class="text-justify">
+    En mis estudios estoy aprendiendo sobre montaje y mantenimiento de ordenadores, redes, 
+    sistemas operativos y un poco de ciberseguridad. También me empezó a interesar la parte de 
+    desarrollo y por eso estoy aprendiendo poco a poco sobre programación y creación de proyectos 
+    web.
+  </p>
+  <p class="text-justify">
+    Mi idea es seguir formándome cuando termine este ciclo y continuar con un grado superior, 
+    ya sea en Desarrollo de Aplicaciones Multiplataforma (DAM) o Desarrollo de Aplicaciones Web (DAW), 
+    para poder crear software real y seguir creciendo como profesional.
+  </p>
+  <p class="text-justify">
+    Me motiva aprender cosas nuevas, trabajar en equipo y mejorar día a día. Quiero seguir 
+    avanzando en el mundo IT, aplicar mis conocimientos en proyectos reales y formar parte de 
+    un equipo donde pueda aportar y seguir creciendo.
+  </p>
+
+  <GlowLineSeparator />
+
+</Layout>

@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/ProjectsPost.astro'
+import { getCollection, getEntry, render } from 'astro:content'
+import { calculateReadingTimeFromMarkdown } from '../../lib/reading' // usa la de MD si la tenés
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects')
+  return projects.map((p) => ({
+    params: { slug: p.slug },   // slug = string
+  }))
+}
+
+const { slug } = Astro.params
+
+// 1) Traer el entry
+const project = await getEntry('projects', slug)
+if (!project) throw new Error(`Project not found: ${slug}`)
+
+// 2) Renderizar el entry con la función render()
+const { Content } = await render(project)
+
+// 3) Calcular tiempo de lectura a partir del Markdown del entry
+const readingTimeMin = calculateReadingTimeFromMarkdown(project.body ?? '')
+---
+
+<Layout
+  title={project.data.title}
+  description={project.data.description}
+  pubDate={project.data.pubDate}
+  updatedDate={project.data.updatedDate}
+  heroImage={project.data.heroImage}
+  author={project.data.author}
+  tags={project.data.tags}
+  showHeader
+  readingTimeMin={readingTimeMin}
+  lang={project.data.lang}
+>
+  <Content />
+</Layout>

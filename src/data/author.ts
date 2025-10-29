@@ -1,7 +1,7 @@
-import avatar from '../assets/images/sample-avatar.jpg';
+import avatar from '../assets/images/about-me.png';
 
 export const author = {
-  name: 'Site Author',
+  name: 'Valentino Nuñez',
   avatar,
   url: '#',
 };

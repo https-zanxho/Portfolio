@@ -1,0 +1,32 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/sections/HeaderES.astro";
+import Footer from "../../components/sections/FooterES.astro";
+import Projects from "../../components/sections/ProjectsES.astro";
+import HeroSection from "../../components/sections/HeroSection.astro";
+import GlowLineSeparator from "../../components/ui/separator/GlowLineSeparator.astro";
+import Button from "../../components/ui/button/Button.astro";
+---
+
+
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <BaseHead title="Portfolio" description="Selected projects and playbooks" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <HeroSection title="Mis Proyectos" subtitle="Aplicaciones y codigos que he creado o mantengo" />
+      <div class="mt-10 flex justify-center">
+      <Button href="/projectsES" variant="primary" size="sm">
+        Ver todos los Codigos →
+      </Button>
+    </div>
+      <Projects />
+      <GlowLineSeparator />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+
