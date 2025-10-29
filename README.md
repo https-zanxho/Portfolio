@@ -79,3 +79,5 @@ Email: <valentinonunez133@gmail.com>
 GitHub: https://github.com/https-zanxho
 
 Si te interesa colaborar o tienes alguna sugerencia, ¡estoy encantado de escucharte!
+
+“Basado en plantilla <free-astro-template>, adaptado y ampliado por Valentino”
