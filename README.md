@@ -21,7 +21,6 @@ Clonar el repositorio:
 
 ```bash
 git clone https://github.com/https-zanxho/Portfolio.git
-cd Portfolio
 ```
 
 Instalar dependencias:
