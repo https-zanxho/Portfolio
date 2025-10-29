@@ -41,13 +41,13 @@ Build para producción:
 
 Soy Valentino, desarrollador en constante aprendizaje, apasionado por:
 
-Software y automatización
+- Software y automatización
 
-Seguridad informática
+- Seguridad informática
 
-Optimización de sistemas
+- Optimización de sistemas
 
-UX & diseño minimalista
+- UX & diseño minimalista
 
 ## Contacto
 
