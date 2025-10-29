@@ -34,3 +34,25 @@ Modo desarrollo:
 Build para producción:
 - npm run build
 - npm run preview
+
+---
+
+## Sobre mí
+
+Soy Valentino, desarrollador en constante aprendizaje, apasionado por:
+
+Software y automatización
+
+Seguridad informática
+
+Optimización de sistemas
+
+UX & diseño minimalista
+
+## Contacto
+
+Email: <valentinonunez133@gmail.com>
+
+GitHub: https://github.com/https-zanxho
+
+Si te interesa colaborar o tienes alguna sugerencia, ¡estoy encantado de escucharte!
