@@ -14,8 +14,8 @@ Portafolio personal construido con **Astro + Tailwind**. Reúne mis proyectos, b
 
 > Subí tus capturas a `public/readme/` y usa estas rutas.
 
-<img src="public/readme/hero.png" alt="Home Preview" width="900">
-<img src="public/readme/projects.png" alt="Projects Preview" width="900">
+<img src="public/readme/home.png" alt="Home Preview" width="900">
+<img src="public/readme/proj.png" alt="Projects Preview" width="900">
 
 ---
 
