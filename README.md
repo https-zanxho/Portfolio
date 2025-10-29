@@ -55,7 +55,7 @@ git clone https://github.com/https-zanxho/Portfolio.git
 cd Portfolio
 npm install
 npm run dev
-
+```
 ---
 
 ## Sobre mí
