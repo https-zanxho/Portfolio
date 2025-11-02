@@ -80,4 +80,4 @@ GitHub: https://github.com/https-zanxho
 
 Si te interesa colaborar o tienes alguna sugerencia, ¡estoy encantado de escucharte!
 
-“Basado en plantilla **free-astro-template by guihubie**, adaptado y ampliado por Valentino”
+“Basado en plantilla **free-astro-template by guihubie**, adaptado y ampliado por Valentino”.
