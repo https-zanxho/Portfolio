@@ -31,22 +31,11 @@ Portafolio personal construido con **Astro + Tailwind**. Reúne mis proyectos, b
 
 ## 🔗 Enlaces rápidos
 
-- 🖥 **Producción:** https://<tu-url>.vercel.app  
+- 🖥 **Producción:** https://portfolio-valentino.vercel.app/  
 - 📁 **Repo:** https://github.com/https-zanxho/Portfolio
 
 ---
 
-## 🌟 Proyectos destacados
-
-> Actualizá los slugs y descripciones. Los links van a tu sitio en Vercel.
-
-| Proyecto                 | Stack                    | Live |
-|--------------------------|--------------------------|------|
-| **Windows Optimizer**    | PowerShell · UI/CLI      | https://<tu-url>.vercel.app/projects/windows-optimizer/ |
-| **Simple Calculator**    | JS · CLI                 | https://<tu-url>.vercel.app/projects/calculator/ |
-| **MySQL CLI**            | Node · MySQL             | https://<tu-url>.vercel.app/projects/mysql-cli/ |
-
----
 
 ## ▶️ Correr en local
 
