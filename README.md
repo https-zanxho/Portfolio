@@ -6,7 +6,7 @@
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000?logo=vercel)](https://<tu-url>.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#-licencia)
 
-Portafolio personal construido con **Astro + Tailwind**. Reúne mis proyectos, bitácoras y experimentos.
+Este es mi portafolio personal construido con **Astro + Tailwind**. Reúne mis proyectos, bitácoras y experimentos.
 
 ---
 
