@@ -36,6 +36,7 @@ Este es mi portafolio personal construido con **Astro + Tailwind**. Reúne mis p
 
 
 ## ▶️ Correr en local
+Para correr el repositorio en local ejecuta los siguientes comandos
 
 ```bash
 git clone https://github.com/https-zanxho/Portfolio.git
